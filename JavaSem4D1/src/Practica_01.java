@@ -1,12 +1,15 @@
+import java.util.Scanner;
 
 public class Practica_01
 {
 
 	public static void main(String[] args)
 	{
+		System.out.println("//////////// Hello World ////////////");
 		// TODO Auto-generated method stub
 		System.out.println("Hello World");
 		
+		System.out.println("\n//////////// Operaciones sencillas ////////////");
 		int a=4;
 		int b=81;
 		int resultado=0;
@@ -37,7 +40,7 @@ public class Practica_01
 		
 		// Cadenas
 
-		System.out.println("//////////// Cadenas ////////////");
+		System.out.println("\n//////////// Cadenas ////////////");
 		String cadena = "Paragaricutirimicuaro";	
 		String cadena2 = cadena;
 		String cadenaCesar=("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ");
@@ -58,7 +61,7 @@ public class Practica_01
 		
 		// Arrays
 		
-		System.out.println("//////////// Arreglos ////////////");
+		System.out.println("\n//////////// Arreglos ////////////");
 		
 		// Definiento arreglos 
 		String[]meses={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
@@ -74,7 +77,6 @@ public class Practica_01
 		
 		System.out.println("\n");
 		System.out.println("//////////// Condicionales ////////////");
-		System.out.println("\n");
 		
 		System.out.println("EQUALS: " + (x==az));
 		System.out.println("EQUALS NEGATIVE OF: " + (x==!az));
@@ -91,5 +93,74 @@ public class Practica_01
 			System.out.println("\nJuana!!");
 		}
 		
+		// Switch Cases
+		
+		System.out.println("\n//////////// Swith / Cases ////////////");
+		
+		System.out.println("Por favor introduce tu opción entre Chana, Juana o Chona");
+		String option = "Chana";
+		Scanner lector = new Scanner(System.in); // Instanciar la clase que lee de teclado
+		option=lector.nextLine();  // Leer de teclado hasta dar enter
+		
+		switch(option)
+		{
+		case "Chana":
+			System.out.println("Chana!");
+			break;
+		case "Juana":
+			System.out.println("Juana!");
+			break;
+		case "Chona":
+			System.out.println("Chona!");
+			break;
+		default:
+			System.out.println("Nacha pop!");
+			break;
 		}
+		
+		// Método equals | Se usa solo para comparar cadenas
+		
+		System.out.println("\n//////////// Método equals ////////////");
+		
+		String cadena5="Hola";
+		
+		if(cadena5.equals("Holi"))
+		{
+			System.out.println("Son igualitas!");
+		}
+		else
+		{
+			System.out.println("No son igualitas!");
+		}
+		
+		// Ciclos FOR
+		
+		System.out.println("\n//////////// Ciclos FOR ////////////");
+		System.out.println("\n//////////// For Each ////////////");
+		for (String i: meses) // For each
+		{
+			System.out.print(i);
+		}
+		
+		// Programa While
+		
+		System.out.println("\n\n//////////// Ciclo While ////////////");
+		
+		int contador=0;
+		
+		// Bucle While
+		while(contador<meses.length)
+		{
+			System.out.println((contador+1) + " : " + meses[contador]);
+			contador++;
+		}
+		
+		
+		// Llamar a Cuenta Palabras
+		System.out.println("\n\n//////////// Cuenta Palabras ////////////");
+		
+		Cuenta_Palabras cPib = new Cuenta_Palabras(5);
+		cPib.cuenta_Letras();
+		
+	}
 }
