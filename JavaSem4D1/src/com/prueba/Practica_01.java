@@ -1,3 +1,4 @@
+package com.prueba;
 import java.util.Scanner;
 
 public class Practica_01
@@ -159,8 +160,47 @@ public class Practica_01
 		// Llamar a Cuenta Palabras
 		System.out.println("\n\n//////////// Cuenta Palabras ////////////");
 		
-		Cuenta_Palabras cPib = new Cuenta_Palabras(5);
+		Cuenta_Palabras cPib = new Cuenta_Palabras(10,20); // Nombre de clase + Nombre de Objeto = Instancia
 		cPib.cuenta_Letras();
 		
+		// Llamar a Otro Método
+		System.out.println("\n\n//////////// Método de Odi ////////////");
+				
+		Cuenta_Palabras cOdi = new Cuenta_Palabras(0,20); // Nombre de clase + Nombre de Objeto = Instancia
+		cOdi.metodo_Odi();
+		
+		
+		// Try and catch
+		System.out.println("\n\n//////////// Try and Catch ////////////");
+		try
+		{
+			contador = 0;
+			while (contador<14)
+			{
+				System.out.println((contador+1)+" : "+meses[contador]);
+				contador++;
+			}
+			
+		} catch (ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Excepción " + ex);
+		} catch (NullPointerException ex)
+		{
+			System.out.println("Excepción " + ex);
+		} catch (ClassCastException ex)
+		{
+			System.out.println("Excepción " + ex);
+		} catch (NumberFormatException ex)
+		{
+			System.out.println("Excepción " + ex);
+		}
+		 catch (Exception ex)
+		{
+			System.out.println("Excepción " + ex);
+		}finally
+		{
+			System.out.println("Bloque finally");
+		}
+		System.out.println("Saliendo del estado de la excepción..");
 	}
 }
