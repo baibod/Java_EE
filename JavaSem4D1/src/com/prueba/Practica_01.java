@@ -1,11 +1,19 @@
 package com.prueba;
 import java.util.Scanner;
+import com.salon4.llorar.Sacapuntas;
 
 public class Practica_01
 {
-
+	public static int id=0;
+	public static int id2=0;
+	public static final int valorFinal=9;
+	
+	
 	public static void main(String[] args)
 	{
+		
+		System.out.println(1905%100);
+		id=25;
 		System.out.println("//////////// Hello World ////////////");
 		// TODO Auto-generated method stub
 		System.out.println("Hello World");
@@ -14,6 +22,8 @@ public class Practica_01
 		int a=4;
 		int b=81;
 		int resultado=0;
+		
+		
 		
 		//Suma
 		resultado=a+b;
@@ -170,9 +180,10 @@ public class Practica_01
 		cOdi.metodo_Odi();
 		
 		
-		// Try and catch
+		/* Try and catch
 		System.out.println("\n\n//////////// Try and Catch ////////////");
-		try
+		
+		try		
 		{
 			contador = 0;
 			while (contador<14)
@@ -202,5 +213,39 @@ public class Practica_01
 			System.out.println("Bloque finally");
 		}
 		System.out.println("Saliendo del estado de la excepción..");
+		 */
+		
+		// Llamando a clase Estudiante
+		
+		System.out.println("\n\n//////////// Llamando a clase Estudiante y cambiando sus valores de forma segura ////////////");
+		
+		// Instanciación de la clase, uso del constructor sobrecargado
+		Estudiante estudiHambre = new Estudiante(2,"Odi el más mero chido");
+		
+		// Obtener los datos de forma segura
+		System.out.println(estudiHambre.getCodigo()+" : "+estudiHambre.getNombre());
+		
+		// Cambiar los valores
+		estudiHambre.setCodigo(4);
+		estudiHambre.setNombre("Gloria");
+		
+		// Obtener los datos de forma segura
+		System.out.println("\n"+estudiHambre.getCodigo()+" : "+estudiHambre.getNombre());
+		
+		// Llamar al método sin modificador de acceso
+		estudiHambre.probar();
+		
+		//Sacapuntas sacaPuntas = new Sacapuntas(456,"filo");
+		
+		//id2++;
+		//System.out.println("\nID del desorden "+id2);
+		//probarEstatico();
+	
+} // Fin de main
+	public static void probarEstatico()
+	{		
+		id=9999999;
+		System.out.println("\n"+id);
 	}
 }
+
